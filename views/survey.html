@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-md-12">
+		<h1>Hi from view/survey.html</h1>
+		<h2>Create  logic here</h2>
+		<ul>
+			<li>Get program</li>
+			<li>Dispay one</li>
+			<li>Display all. Pick one</li>
+		</ul>
+	</div>
+
+	<div class="col-md-12">
+		<table class="table">
+			<thread>
+				<tr>
+					<th>Name</th>
+					<th>Id</th>
+				</tr>
+			</thread>
+		<tbody>
+				<tr ng-repeat="program in programs">
+					<td><a href="#/skiplogic/{{program.id}}">{{program.name}}</a></td>
+					<td>{{program.id}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

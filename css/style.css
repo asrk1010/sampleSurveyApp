@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+.dataElement{
+	margin-bottom: 20px;
+}
+
+
+.select-skipLogic{
+	width:100%;
+}

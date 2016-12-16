@@ -1,0 +1,34 @@
+<!-- Skiplogic detail program-->
+
+TBD: detail view for {{id}}
+
+<ul>
+	<li>display one</li>
+	<li>Go to next page after defined logic </li>
+	<li>On each select</li>
+	<li>seetings</li>
+	<li>Define logic</li>
+</ul>
+
+<div class="row">
+	<div class="col-md-6">
+	Display single element here<br>
+	<p>{{dataLength}}</p>
+	<select name="test"  multiple="yes" ngModel="{{dataLength}}" size="10" class="select-skipLogic">
+	<!--<select name="test" size="2" multiple="yes">-->
+		<option ng-repeat="data in dataElements">{{data.dataElement.name}}</option>
+	</select>
+	</div>
+	<div class="col-md-6">
+	
+		What to skip here <br>
+		True: <select>
+			<option></option>
+			<option>test2</option>
+		</select>
+		False: 
+		<select>
+			<option>Test</option>	
+		</select>
+	</div>
+</div>

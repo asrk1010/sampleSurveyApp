@@ -1,0 +1,28 @@
+<html ng-app="skipLogic">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div ng-controller="formController">
+		<label>	Name</label>
+		<input type="text" ng-model="inData" > 
+		<hr>
+		<h1 ng-show="name.show">Your {{name.name}}</h1>
+		<h2 ng-show="age.show">Your age {{age.age}}</h2>
+
+	</div>
+
+	<!-- Angular -->
+	<script src="js/vendor/angular.min.js"></script>
+	<script src="js/vendor/angular-route.min.js"></script>
+	<script src="js/vendor/angular-resource.min.js"></script>
+	<!-- Third part lib -->
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+
+	<!--Skiplogicjs-->
+	<script src="js/test/skiplogic.js"></script>
+</body>
+</html>

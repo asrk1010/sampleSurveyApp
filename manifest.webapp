@@ -1,0 +1,17 @@
+{
+	"version":"0.3",
+	"name": "sample app",
+	"description": "sample dummp app with dhis2",
+	"launch_path": "index.html",
+	"developer": {
+		"name": "saiA",
+		"url": "http://google.com"
+	},
+	"default_locale": "en",
+	"activities": {
+		"dhis": {
+			"href": "*"
+		}
+	}
+
+}

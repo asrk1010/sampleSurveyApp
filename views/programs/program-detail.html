@@ -1,0 +1,43 @@
+TBD: detail view for {{id}}
+<div class="row">
+	<div class="col-md-12">
+		<h1>{{programId.name}}</h1>
+		<h1>Do normal survey here</h1>
+		<span ng-repeat="programStages in programId.programStages">
+			{{programStages.name}}
+		</span>
+		<br>
+		<br>
+	</div><!-- Col 12 -->
+
+	<div class="col-md-6" ng-controller="DataElementController">
+		<div ng-show="alert.show" class="alert alert-danger">
+			<p>
+				<strong>Danger!</strong> Element {{alert.dataElement}} got {{alert.dataElementLength}} optionSets, and will not be shown
+			</p>
+		</div>
+		<form role="form">
+			<div class="form-group" ng-repeat="dataElement in programStageDataElements">
+				<!--<div ng-show="true">-->
+				<div ng-show="dataElement.showElement">
+					<label for="inputName">{{dataElement.dataElement.name}}</label>
+					<input type="{{dataElement.inputType}}" class="form-control" id="inputName" placeholder="{{dataElement.dataElement.name}}" ng-show="dataElement.showInput" ng-model="dataElement.userData"/>
+					<select class="form-control"  ng-show="dataElement.showSelect" ng-model="dataElement.userData">
+						<option ng-repeat="optionValues in dataElement.optionSetValues track by $index" value="{{optionValues}}">{{optionValues}}</option>
+					</select>
+				</div><!-- ng show -->
+			</div><!-- Form group -->
+			<button type="submit" class="btn btn-default" ng-click="submitData()">Submit</button>
+		</form><!-- Form -->
+	</div><!-- col 6-->
+
+	<div class="col-md-6">
+		<h1>Sending data: </h1>
+		<p ng-repeat="(key, value) in dataSent track by $index">
+			{{'index: ' + $index + ' - ' + value + ' + ' + key}}
+		</p>
+		{{dataSent | json}}
+	</div>
+</div><!-- Row -->
+
+
